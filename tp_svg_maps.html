@@ -1,0 +1,36 @@
+<img src="station_devoluy.png">
+
+<div style="position: absolute; top: 0px; left: 0px;">
+<!-- <div style="position: absolute; top: 15px; left: 630px;"> -->
+    <!-- <svg width="200" height="200"  viewBox="0 0 300 100"  visibility="visile"></svg> -->
+    
+  <svg width="2500" height="1664">
+    <!-- Remplir avec une simple couleur -->
+    <circle id="monsvg" cx="660" cy="235" r="150" style="fill:lightgray;stroke:purple;stroke-width:3;opacity:50%;" />
+  </svg>
+</div>
+
+       <script type="text/javascript">
+            var rect = document.getElementById('monsvg');
+            rect.addEventListener("mouseover", function (event) {
+                var drapeau = document.getElementById('monsvg');
+                drapeau.style.fill = "lime";
+                drapeau.style.opacity = "60%";
+                drapeau.style.r = "155";
+                drapeau.style.cursor = "pointer";
+                //drapeau.style.visibility = "hidden";
+                //drapeau.style.zIndex = 100;
+            }, false);
+           rect.addEventListener("mouseout", function (event) {
+                var drapeau = document.getElementById('monsvg');
+                drapeau.style.fill = "lightgray";
+                drapeau.style.opacity = "50%";
+                drapeau.style.r = "150";
+                //drapeau.style.visibility = "hidden";
+                //drapeau.style.zIndex = 100;
+            }, false);
+           rect.addEventListener("click", function (event) {
+                var corps = document.getElementById('body');
+                open('test.htm', 'new', 'width=300,height=150');
+            }, false);
+       </script>
